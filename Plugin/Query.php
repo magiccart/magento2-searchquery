@@ -26,6 +26,14 @@ class Query extends \Magento\Framework\View\Element\Template
         if($enabled){
             $skip = $this->helper->getConfigModule('general/skip');
             $saveThis = (!$skip && $numResults);
+            $query = $subject->getQueryText();
+            $query = str_split($query);
+            foreach ($query as $char) {
+                if ( !(preg_match("/^[a-zA-Z0-9-+ ]/", $char)) ){
+                    $saveThis = false;
+                    break;
+                }
+            }
         }
         if($saveThis){
             $subject->getResource()->saveIncrementalPopularity($subject);
