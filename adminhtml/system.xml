@@ -1,0 +1,40 @@
+<!-- <?xml version="1.0"?> -->
+
+<!-- /**
+ * Magiccart 
+ * @category    Magiccart 
+ * @copyright   Copyright (c) 2014 Magiccart (http://www.magiccart.net/) 
+ * @license     http://www.magiccart.net/license-agreement.html
+ * @Author: DOng NGuyen<nguyen@dvn.com>
+ * @@Create Date: 2024-02-23 18:59:34
+ * @@Modify Date: 2024-09-30 08:55:53
+ * @@Function:
+ */ -->
+ 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magiccart" translate="label" sortOrder="89">
+            <label>Magiccart</label>
+        </tab>
+        <section id="magiccart_searchquery" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Search Query</label>
+            <tab>magiccart</tab>
+            <resource>Magiccart_SearchQuery::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="0"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <comment>Enabled frontend</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="vertical" translate="label comment" type="select" sortOrder="15"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Slide Vertical</label>
+                    <comment>Mode Vertical</comment>
+                    <source_model>Magiccart\Shopbrand\Model\System\Config\Skip</source_model>
+                    <depends><field id="slide" separator=",">1,3</field></depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

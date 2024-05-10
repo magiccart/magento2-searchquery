@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- /**
+ * Magiccart 
+ * @category    Magiccart 
+ * @copyright   Copyright (c) 2014 Magiccart (http://www.magiccart.net/) 
+ * @license     http://www.magiccart.net/license-agreement.html
+ * @Author: DOng NGuyen<nguyen@dvn.com>
+ * @@Create Date: 2024-02-23 18:59:34
+ * @@Modify Date: 2024-09-30 00:56:37
+ * @@Function:
+ */ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <magiccart_searchquery>
+            <general>
+                <enabled>0</enabled>
+                <skip>1</skip>
+            </general>
+        </magiccart_searchquery>
+    </default>
+</config>
