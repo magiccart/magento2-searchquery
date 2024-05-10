@@ -14,7 +14,7 @@
         <magiccart_searchquery>
             <general>
                 <enabled>1</enabled>
-                <skip>1</skip>
+                <skip>0</skip>
             </general>
         </magiccart_searchquery>
     </default>
