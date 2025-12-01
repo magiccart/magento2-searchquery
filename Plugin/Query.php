@@ -27,7 +27,7 @@ class Query extends \Magento\Framework\View\Element\Template
             $skip = $this->helper->getConfigModule('general/skip');
             $saveThis = (!$skip && $numResults);
             $query = $subject->getQueryText();
-            if( preg_match('/(www\.|https?|\.com|\.cn)/i', $query) ){
+            if( preg_match('/(www\.|https?|\.com|\.cn|bitcoin|usdt|eth)/i', $query) ){
                 $saveThis = false;
             }else{
                 $query = str_split($query);
