@@ -27,11 +27,15 @@ class Query extends \Magento\Framework\View\Element\Template
             $skip = $this->helper->getConfigModule('general/skip');
             $saveThis = (!$skip && $numResults);
             $query = $subject->getQueryText();
-            $query = str_split($query);
-            foreach ($query as $char) {
-                if ( !(preg_match("/^[a-zA-Z0-9-+ ]/", $char)) ){
-                    $saveThis = false;
-                    break;
+            if( preg_match('/(www\.|https?|\.com|\.cn)/i', $query) ){
+                $saveThis = false;
+            }else{
+                $query = str_split($query);
+                foreach ($query as $char) {
+                    if ( !(preg_match("/^[a-zA-Z0-9-+ ]/", $char)) ){
+                        $saveThis = false;
+                        break;
+                    }
                 }
             }
         }
